@@ -51,7 +51,7 @@ CFLAGS	:=	-g -w -O3 -mword-relocations -finline-limit=20000 \
 			-fomit-frame-pointer -ffunction-sections \
 			$(ARCH)
 
-CFLAGS	+=	$(INCLUDE) -DARM11 -D_3DS -DLIBCTRU_1_0_0
+CFLAGS	+=	$(INCLUDE) -DARM11 -D_3DS
 
 CXXFLAGS	:= $(CFLAGS) -fno-rtti -fno-exceptions -std=gnu++11
 
@@ -86,7 +86,7 @@ export DEPSDIR	:=	$(CURDIR)/$(BUILD)
 #CPPFILES	:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.cpp)))
 CFILES		:=  blargsnes_spc700/dsp.c
 CPPFILES	:=	3dsmain.cpp 3dsmenu.cpp 3dsopt.cpp \
-			3dsgpu.cpp 3dssound.cpp 3dsui.cpp 3dsexit.cpp \
+			3dsgpu.cpp 3dssound.cpp 3dsui.cpp 3dsexit.cpp 3dsgbk.cpp 3dsutf8togbk.cpp \
 			3dsconfig.cpp 3dsfiles.cpp 3dsinput.cpp 3dsmatrix.cpp \
 			3dsimpl.cpp 3dsimpl_tilecache.cpp 3dsimpl_gpu.cpp \
 			gpulib.cpp \

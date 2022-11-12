@@ -5,4 +5,6 @@ build
 *.elf
 *.smdh
 Thumbs.db
+snes9x_3ds-v1.30-cn.zip
+snes9x_3ds-v1.30-cn/
 releases/*

@@ -14,16 +14,18 @@ To use:
 
 ### Homebrew Launcher:
 
-1. Copy Snes9x_3ds.3dsx, Snes9x_3ds.smdh, snes9x_3ds_top.png into the /3ds/snes9x_3ds on your SD card.
-2. Place your SNES ROMs inside any folder.
-3. Go to your Homebrew Launcher (either via Cubic Ninja, Soundhax or other entry points) and launch the snes9x_3ds emulator.
+1. Copy emus/ directory into the /3ds on your SD card.
+2. Copy Snes9x_3ds.3dsx, Snes9x_3ds.smdh, snes9x_3ds_top.png into the /3ds/snes9x_3ds on your SD card.
+3. Place your SNES ROMs inside any folder.
+4. Go to your Homebrew Launcher (either via Cubic Ninja, Soundhax or other entry points) and launch the snes9x_3ds emulator.
 
 ### CIA Version:
 
-1. Use your favorite CIA installer to install snes9x_3ds.cia into your CFW. You can also use FBI to download from TitleDB.
-2. Place your SNES ROMs inside any folder.
-3. Copy snes9x_3ds_top.png to ROOT of your SD card.
-4. Exit your CIA installer and go to your CFW's home screen to launch the app.
+1. Copy emus/ directory into the /3ds on your SD card.
+2. Use your favorite CIA installer to install snes9x_3ds.cia into your CFW. You can also use FBI to download from TitleDB.
+3. Place your SNES ROMs inside any folder.
+4. Copy snes9x_3ds_top.png to ROOT of your SD card.
+5. Exit your CIA installer and go to your CFW's home screen to launch the app.
 
 ### When in-game,
 
@@ -374,6 +376,7 @@ You will need:
 - libctru v1.2.0
 - citro3d v1.2.0
 
+Edit source/3dsgpu.cpp and replace `u8 isNew3DS = 0;` with `static bool isNew3DS = false;`
 Remove the following definition `-DLIBCTRU_1_0_0` from the makefile
 
 Then build by using *make*.
